@@ -1,0 +1,20 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def pw(x):
+
+#condition 1
+	if x <= 9:
+		return (x**2) - 7
+    
+#condition 2
+	if x >= 10:
+		return (x-10)**2 - 7
+
+vpw = np.vectorize(pw)
+
+x = np.linspace(0, 99)
+y = vpw(x)
+
+plt.stem(x,y,'-')
+plt.show()
