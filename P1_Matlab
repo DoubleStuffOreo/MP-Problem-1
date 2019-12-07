@@ -1,0 +1,17 @@
+%Problem 1 - Matlab
+
+for x = 1:100
+
+   if n(x)<9
+
+     y(x) = (n(x).^2) - 7;
+
+   elseif n(x)>=10
+
+     y(x) = (n(x)-10).^2 - 7;
+
+   end
+end
+n = [0:99];
+
+stem (n,y)
